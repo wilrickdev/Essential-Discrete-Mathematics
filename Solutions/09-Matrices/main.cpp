@@ -104,7 +104,7 @@ void exercise5()
 	std::vector<std::vector<int>> identity = {
 		{1, 0, 0},
 		{0, 1, 0},
-		{0, 0, 1},
+		{0, 0, 1}
 	};
 	
 	std::cout << calculateDeterminant(identity) << std::endl;
@@ -114,11 +114,11 @@ void exercise6()
 {
 	using namespace ex6;
 
-	std::vector<std::vector<int>> identity = {
+	std::vector<std::vector<int>> mat = {
 		{6, 1, 1},
 		{4, -2, 5},
-		{2, 8, 7},
+		{2, 8, 7}
 	};
 
-	std::cout << calculateDeterminant(identity) << std::endl;
+	std::cout << determinant(mat) << std::endl;
 }

@@ -10,7 +10,9 @@
 namespace ex6
 {
 	typedef std::vector<std::vector<int>> Matrix;
+	typedef std::pair<int, bool> Column;
+	typedef std::vector<Column> ColumnList;
 	
-	Matrix getSubMatrix(const Matrix& matrix, unsigned int pivot);
-	int calculateDeterminant(Matrix matrix);
+	int calculateDeterminant(const Matrix& matrix, size_t currentRow, ColumnList& columns);
+	int determinant(const Matrix& matrix);
 }

@@ -1,40 +1,65 @@
 #include "exercise-06.h"
 
-ex6::Matrix ex6::getSubMatrix(const Matrix& matrix, unsigned int pivot)
-{
-	ex6::Matrix subMatrix(matrix.size() - 1, std::vector<int>(matrix.size() - 1, 0));
-	for (size_t row = 1; row < matrix.size(); ++row)
-	{
-		for (size_t column = 0; column < matrix[row].size(); ++column)
-		{
-			if (column < pivot)
-			{
-				subMatrix[row - 1][column] = matrix[row][column];
-			}
-			else if (column > pivot)
-			{
-				subMatrix[row - 1][column - 1] = matrix[row][column];
-			}
-		}
-	}
-	return subMatrix;
-}
+#include <algorithm>
+#include <iostream>
+#include <utility>
+#include <vector>
 
-int ex6::calculateDeterminant(Matrix matrix)
+int ex6::calculateDeterminant(const Matrix& matrix, size_t currentRow, ColumnList& columns)
 {
-	if (matrix.size() > 2)
+	if (matrix.size() - currentRow > 2)
 	{
 		int result = 0;
+		bool bEven = true;
+		
 		for (size_t column = 0; column < matrix.size(); ++column)
 		{
-			if (matrix[0][column] != 0)
+			if (columns[column].second == false)
 			{
-				auto subMatrix = getSubMatrix(matrix, column);
-				result += matrix[0][column] * (column % 2 == 0 ? 1 : -1)
-					* calculateDeterminant(std::move(subMatrix));
+				columns[column].second = true;
+
+				result += (bEven ? 1 : -1) * matrix[currentRow][column]
+					* calculateDeterminant(matrix, currentRow + 1, columns);
+				bEven = !bEven;
+				
+				columns[column].second = false;
 			}
 		}
 		return result;
 	}
-	return matrix[0][0] * matrix[1][1] - matrix[1][0] * matrix[0][1];
+
+	auto predicate = [](const Column& pair) {return !pair.second; };
+	auto it1 = std::find_if(columns.begin(), columns.end(), predicate);
+	auto it2 = std::find_if(it1 + 1, columns.end(), predicate);
+	size_t size = matrix.size();
+	
+	return matrix[size - 2][it1->first] * matrix[size - 1][it2->first]
+		- matrix[size - 1][it1->first] * matrix[size - 2][it2->first];
+}
+
+int ex6::determinant(const Matrix& matrix)
+{
+	ColumnList columns(matrix.size());
+	for (size_t i = 0; i < columns.size(); ++i)
+	{
+		columns[i].first = i;
+		columns[i].second = false;
+	}
+	
+	int result = 0;
+	bool bEven = true;
+	
+	size_t currentRow = 0;
+	
+	for (size_t column = 0; column < matrix[currentRow].size(); ++column)
+	{
+		columns[column].second = true;
+
+		result += (bEven ? 1 : -1) * matrix[currentRow][column]
+			* calculateDeterminant(matrix, currentRow + 1, columns);
+		bEven = !bEven;
+		
+		columns[column].second = false;
+	}
+	return result;
 }
