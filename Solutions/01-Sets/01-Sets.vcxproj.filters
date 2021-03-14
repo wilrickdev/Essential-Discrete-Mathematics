@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Exercises">
+      <UniqueIdentifier>{b186f7fd-cd08-4f9b-821e-cdf50c747e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\01">
+      <UniqueIdentifier>{3c3e5d21-f511-4b93-af4d-612bcd73e27e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\02">
+      <UniqueIdentifier>{8c932372-e3cf-4e59-b8d9-2fcfe7c04535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\03">
+      <UniqueIdentifier>{f2f71221-5401-4604-9b3b-fb19ac39415c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise-01.cpp">
+      <Filter>Exercises\01</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise-02.cpp">
+      <Filter>Exercises\02</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise-03.cpp">
+      <Filter>Exercises\03</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="exercise-01.h">
+      <Filter>Exercises\01</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-02.h">
+      <Filter>Exercises\02</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-03.h">
+      <Filter>Exercises\03</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
