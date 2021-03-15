@@ -25,6 +25,18 @@
     <Filter Include="Exercises\03">
       <UniqueIdentifier>{f2f71221-5401-4604-9b3b-fb19ac39415c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Exercises\04">
+      <UniqueIdentifier>{5d1b8c32-2d14-4d45-9458-a0d32a574fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\05">
+      <UniqueIdentifier>{699d4c6f-a514-412b-b7a4-d8bf5c4fc7c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\06">
+      <UniqueIdentifier>{6f851639-8bc5-4939-8a46-9d253e0760bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercises\07">
+      <UniqueIdentifier>{422cbfa0-9779-4701-95d7-fadbaa92de4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,6 +51,15 @@
     <ClCompile Include="exercise-03.cpp">
       <Filter>Exercises\03</Filter>
     </ClCompile>
+    <ClCompile Include="exercise-04.cpp">
+      <Filter>Exercises\04</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise-05.cpp">
+      <Filter>Exercises\05</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise-06.cpp">
+      <Filter>Exercises\06</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exercise-01.h">
@@ -49,6 +70,18 @@
     </ClInclude>
     <ClInclude Include="exercise-03.h">
       <Filter>Exercises\03</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-04.h">
+      <Filter>Exercises\04</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-05.h">
+      <Filter>Exercises\05</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-06.h">
+      <Filter>Exercises\06</Filter>
+    </ClInclude>
+    <ClInclude Include="exercise-07.h">
+      <Filter>Exercises\07</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -146,12 +146,19 @@
     <ClCompile Include="exercise-01.cpp" />
     <ClCompile Include="exercise-02.cpp" />
     <ClCompile Include="exercise-03.cpp" />
+    <ClCompile Include="exercise-04.cpp" />
+    <ClCompile Include="exercise-05.cpp" />
+    <ClCompile Include="exercise-06.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="exercise-01.h" />
     <ClInclude Include="exercise-02.h" />
     <ClInclude Include="exercise-03.h" />
+    <ClInclude Include="exercise-04.h" />
+    <ClInclude Include="exercise-05.h" />
+    <ClInclude Include="exercise-06.h" />
+    <ClInclude Include="exercise-07.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
